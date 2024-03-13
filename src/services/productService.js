@@ -7,6 +7,7 @@ export async function getProductList(searchTerm){
     return data;
 }
 
+
 export async function getProduct(id){
     const response = await fetch(`http://localhost:8000/444/products/${id}`);
     if(!response.ok){
