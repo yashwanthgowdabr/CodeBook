@@ -49,7 +49,7 @@ export async function createOrder(cartList, total, user){
         headers: { "Content-Type": "application/json", Authorization: `Bearer ${browserData.token}` },
         body: JSON.stringify(order)
     }
-    const response = await fetch(${process.env.REACT_APP_HOST}/660/orders`, requestOptions);
+    const response = await fetch(`${process.env.REACT_APP_HOST}/660/orders`, requestOptions);
     if(!response.ok){
         throw { message: response.statusText, status: response.status }; //eslint-disable-line
     }
